@@ -1,8 +1,8 @@
 "use client"
 
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
+import { Button } from "../../../component/ui/button"
+import { Card, CardContent, CardHeader, CardTitle } from "../../../component/ui/card"
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "../../../component/ui/select"
 import { ArrowLeft, Package, User, MapPin, CreditCard } from "lucide-react"
 import Link from "next/link"
 import { useState } from "react"
