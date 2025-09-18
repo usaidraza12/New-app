@@ -1,5 +1,5 @@
 import AddCart from "../../module/cart/addcart";
-import { DB } from "@/app/lib/mongodb";
+import { DB } from "../../../lib/mongodb";
 export async function PUT(req, { params }) {
   try {
     await DB();
