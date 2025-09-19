@@ -162,6 +162,7 @@ const handleDecrease = async (productId) => {
                 <div className="p-6 border-b">
                   <h2 className="text-xl font-semibold text-gray-800">Cart Items ({getTotalItems()} items)</h2>
                 </div>
+
 <div className="divide-y">
   {cartItems.map((item) => (
     <div key={item._id} className="p-6">
@@ -180,7 +181,7 @@ const handleDecrease = async (productId) => {
           <h3 className="text-lg font-medium text-gray-800 mb-1 truncate">
             {item.name}
           </h3>
-          {/* <p className="text-sm text-gray-600 mb-2">{item.category}</p> */}
+          <p className="text-sm text-gray-600 mb-2">{item.category}</p>
           {item.size && (
             <p className="text-sm text-gray-600 mb-2">
               Size: {item.selectedsize}
@@ -232,67 +233,7 @@ const handleDecrease = async (productId) => {
     </div>
   ))}
 </div>
-
-                {/* <div className="divide-y">
-                  {cartItems.map((item) => (
-                    <div key={item._id} className="p-6">
-                      <div className="flex items-start gap-4">
-                        {/* Product Image */}
-                        {/* <div className="flex-shrink-0">
-                          <img
-                            src={item.profileImageUrl}
-                            alt={item.name}
-                            className="w-24 h-24 object-cover rounded-lg"
-                          />
-                        </div> */}
-
-                        {/* Product Details */}
-                        {/* <div className="flex-1 min-w-0">
-                          <h3 className="text-lg font-medium text-gray-800 mb-1">{item.name}</h3>
-                          <p className="text-sm text-gray-600 mb-2">{item.category}</p>
-                          {item.size && <p className="text-sm text-gray-600 mb-2">Size: {item.selectedsize}</p>}
-                          <p className="text-lg font-semibold text-blue-600">Rs. {item.price}</p>
-                        </div> */}
-
-                        {/* Quantity Controls */}
-                        {/* <div className="flex items-center gap-1 ">
-                          <div className="flex items-center border rounded-lg">
-                            <button
-                              onClick={() => handleDecrease(item._id)}
-                              className="px-1 p-2 hover:bg-gray-100 transition-colors"
-                              aria-label="Decrease quantity"
-                            >
-                              <Minus className="h-4 w-4 "  />
-                            </button>
-                            <span className="px-4 py-2 font-medium min-w-[3rem] text-center">{item.quantity}</span>
-                            <button
-                              onClick={() => handleIncrease(item._id)}
-                              className="px-1 p-2 hover:bg-gray-100 transition-colors"
-                              aria-label="Increase quantity"
-                            >
-                              <Plus className="h-4 w-4" />
-                            </button>
-                          </div>
-
-                          <button
-                            onClick={() => removeItem(item.name)}
-                            className="p-2 text-red-600 hover:bg-red-50 rounded-lg transition-colors"
-                            aria-label="Remove item"
-                          >
-                            <Trash2 className="h-5 w-5" />
-                          </button>
-                        </div>
-                      </div> */}
-
-                      {/* Item Total */}
-                      {/* <div className="mt-4 text-right">
-                        <p className="text-lg font-semibold text-gray-800">
-                          Subtotal: Rs. {item.price * item.quantity}
-                        </p>
-                      </div> */}
-                    {/* </div>
-                  ))}
-                </div> */} 
+               
               </div>
             </div>
 

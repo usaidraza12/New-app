@@ -1,3 +1,4 @@
+
 import CallToAction from "./home/call-to-action";
 import FeaturedProducts from "./home/featured-products";
 import Footer from "./home/footer";
@@ -6,6 +7,7 @@ import Navbar from "./home/home";
 
 
 export default function HomePage() {
+  
   return (
  
     <div>

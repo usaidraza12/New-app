@@ -3,6 +3,8 @@ import { Card ,CardContent,CardHeader,CardTitle} from "../component/ui/card";
 import { Package, ShoppingCart, Users, DollarSign } from "lucide-react"
 
 export default function AdminDashboard() {
+
+  // window.location.reload()
   // Mock data - replace with real data from your database
   const stats = [
     {

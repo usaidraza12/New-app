@@ -64,7 +64,6 @@ import { jwtVerify } from "jose";
 const SECRET = new TextEncoder().encode(process.env.JWT_SECRET); // same secret jo token banate waqt use kiya
 
 export async function middleware(req) {
-  // window.location.reload()
   const token =  req.cookies.get("token")?.value;  
   const path = req.nextUrl.pathname;
   const id = req.cookies.get("id")?.value;
