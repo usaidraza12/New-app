@@ -54,7 +54,7 @@ export default function AddProductPage() {
     e.preventDefault()
    
     // Here you would typically send the data to your backend API
-    console.log("Product data:", formData)
+    // console.log("Product data:", formData)
 
     // Simulate API call
     alert("Product added successfully!")

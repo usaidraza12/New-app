@@ -39,7 +39,7 @@ export async function PUT(req, { params }) {
       });
 
       // TODO: yahan tum apna image upload logic lagao (Cloudinary, local storage, etc.)
-      console.log("Image file:", file?.name);
+      // console.log("Image file:", file?.name);
     } else {
       // 🔹 Agar sirf JSON bheja hai
       const body = await req.json();

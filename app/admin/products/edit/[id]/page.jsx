@@ -15,7 +15,7 @@ import axios from "axios"
 export default function AdProductPage() {
   const router = useRouter();
   const { id } = useParams();
-  console.log(id)
+  // console.log(id)
 
   const [filef, setFilef] = useState(null)
   const [imagePreview, setImagePreview] = useState([])

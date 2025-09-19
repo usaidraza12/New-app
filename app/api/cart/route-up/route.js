@@ -8,7 +8,7 @@ export async function POST(req) {
     const { productId } = await req.json();
 
     const cartItem = await Car.findOne({_id:productId});
-     console.log("mycart",cartItem)
+    //  console.log("mycart",cartItem)
     if (!cartItem) {
       return NextResponse.json({ message: "Item not found in cart" }, { status: 404 });
     }
@@ -20,7 +20,7 @@ export async function POST(req) {
 
     if (cartItem) {
       cartItem.quantity -= 1;
-      console.log(cartItem)
+      // console.log(cartItem)
       await cartItem.save();
       return NextResponse.json({ message: "Quantity decreased", cartItem });
     } else {

@@ -52,8 +52,14 @@ const handleSubmit = async (e) => {
       { withCredentials: true } // 🔥 important
     );
 // console.log(res.data.role)
-     
+
+    //  window.location.reload();
+          // router.reload();
           router.replace("/");
+    //  window.location.reload();
+
+
+
        // ✅ ab yahan redirect hoga
     
   } catch (err) {

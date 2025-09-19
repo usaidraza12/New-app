@@ -7,7 +7,7 @@ export async function DELETE(request) {
   try {
     const body = await request.json()
     const { name} = body
-    console.log(name)
+    // console.log(name)
 
     const find= await AddCart.findOneAndDelete({name:name})
     // Validate required fields

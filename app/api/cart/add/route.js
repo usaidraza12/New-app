@@ -19,7 +19,7 @@ export async function POST(request) {
       return Response.json({ message: "Item quantity updated" }, { status: 200 });
     }
 
-console.log(product)
+// console.log(product)
     const cartItem = await Car.create({
       category: product.category,
       price: product.price,
@@ -40,7 +40,7 @@ console.log(product)
       { status: 200 }
     );
   } catch (error) {
-    console.log("Add to cart error:", error);
+    // console.log("Add to cart error:", error);
     return Response.json({ error: "Failed to add item to cart" }, { status: 500 });
   }
 }

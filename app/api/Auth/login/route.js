@@ -30,7 +30,7 @@ export async function POST(req) {
       // console.log("password notmatch")
       return NextResponse.json({ message: "Invalid credentials" }, { status: 401 });
     }
-      console.log("match")
+      // console.log("match")
 
     // ✅ JWT token generate
     const token = jwt.sign(

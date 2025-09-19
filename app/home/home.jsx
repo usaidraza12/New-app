@@ -5,6 +5,7 @@
    import { useRouter } from "next/navigation";
 import Cookies from "js-cookie";
 import { useDispatch, useSelector } from "react-redux";
+// import Cookies from "js-cookie";
    import { Menu, ChevronRight, ShoppingCart, User, Search, X } from "lucide-react"
 //    "use client"
 import { incrementC } from "../context/counterSlice";
@@ -300,11 +301,11 @@ import { incrementC } from "../context/counterSlice";
      { title: "Shop", href: "/shop" },
      {
        title: "Categories", items: [
-         { title: "Men", href: "/" },
-         { title: "Women", href: "/" },
+         { title: "Men", href: "/shop" },
+         { title: "Women", href: "/shop" },
        ],
      },
-     { title: "Deals", href: "/" },
+     { title: "Deals", href: "/shop" },
      { title: "About Us", href: "/about" },
      { title: "Contact", href: "/" },
    ]
@@ -318,7 +319,7 @@ const dispetch =useDispatch();
 const cartCount = useSelector((state)=>state.counter.cart.length);
 
   // const info = useSelector((state)=>(state.counter.data))
-
+ const token = Cookies.get("token");
      const [isOn, setIsOn] = useState(false);
      const [openMobileSub, setOpenMobileSub] = useState(null)    
 
@@ -426,7 +427,7 @@ const handleLogout = () => {
             </button>
 
             {/* User dropdown menu */}
-            {isUserMenuOpen && (
+            {isUserMenuOpen && token && (
               <>
                 {/* Backdrop to close menu when clicking outside */}
                 <div className="fixed inset-0 z-10" onClick={closeUserMenu}></div>

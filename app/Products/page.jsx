@@ -7,16 +7,25 @@ import { useState, useEffect } from "react"
 import axios from "axios"
 import FeaturedProducts from "../home/featured-products"
 import Cookies from "js-cookie";
+import { Toaster, toast } from "react-hot-toast";
 
 export default function ProductDetailPage() {
   const router = useRouter();
    const UserId = Cookies.get("id");  
-  console.log(UserId);
+  // console.log(UserId);
   const [selectedSize, setSelectedSize] = useState("")
   const [quantity, setQuantity] = useState(1)
   const [error, setError] = useState("")
   const [product, setProduct] = useState(null)
+  const handleAdd = () => {
+    // Yahan apna cart add logic likho
+    toast.success("🛒 Product added to cart!");
+  };
 
+   const handleC = () => {
+    // Yahan apna cart add logic likho
+    toast.success("🛒 Product added nh howa");
+  };
   // ✅ Client pe localStorage access karo
   useEffect(() => {
     const saved = localStorage.getItem("cartpro")
@@ -46,11 +55,11 @@ export default function ProductDetailPage() {
         },
       })
 
-      alert("Product cart mein add ho gaya!")
+      handleAdd()
       router.replace("/")
     } catch (error) {
       console.error("Error sending data:", error)
-      alert("Kuch galat ho gaya, dobara try karein!")
+      handleC()
     }
   }
 
@@ -149,6 +158,7 @@ export default function ProductDetailPage() {
                 <ShoppingCart className="h-5 w-5" />
                 Cart Mein Dalen
               </button>
+              <Toaster position="top-right" />
 
               {/* Back to Shop Link */}
               <div className="mt-6 text-center">

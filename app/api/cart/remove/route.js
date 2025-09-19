@@ -4,9 +4,9 @@ export async function DELETE(request) {
     await DB()
   try {
     const body = await request.json()
-    console.log(body)
+    // console.log(body)
     const { name} = body
-    console.log(name)
+    // console.log(name)
 
     const find= await Car.findOneAndDelete({name:name})
     // Validate required fields
